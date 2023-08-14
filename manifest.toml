@@ -1,0 +1,10 @@
+manifest_version = 1
+
+[module]
+name = "Torment"
+id = "torment"
+description = "Torment."
+version = "0.0.1"
+license = "GNU GPLv3"
+authors = ["Fripe"]
+requirements=["aiofiles", "Windows-Toasts"]
