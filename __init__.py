@@ -6,6 +6,7 @@ from windows_toasts import ToastImageAndText1, WindowsToaster
 
 import breadcord
 
+
 class Torment(breadcord.module.ModuleCog):
     def __init__(self, module_id: str):
         super().__init__(module_id)
@@ -40,5 +41,5 @@ class Torment(breadcord.module.ModuleCog):
         await ctx.reply("Toast sent.")
 
 
-async def setup(bot: breadcord.Bot):
-    await bot.add_cog(Torment("torment"))
+async def setup(bot: breadcord.Bot, module: breadcord.module.Module) -> None:
+    await bot.add_cog(Torment(module.id))
